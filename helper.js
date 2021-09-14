@@ -32,6 +32,6 @@ export async function getRoomList (client,filter){
 
 export async function getCustomerList (client,filter){
     const result = await client.db("hallbooking").collection("rooms_booked").find(filter,{booked_status:0}).toArray();
-    console.log("successfully room  list is obtanied",result);
+    console.log("successfully customer list is obtanied",result);
     return result;
 }
